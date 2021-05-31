@@ -1,0 +1,108 @@
+/* Filter */
+.filter {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+    .filter-item {
+        display: block;
+        border-bottom: 1px #DDD solid;
+        padding: 20px 0;
+    }
+        .filter-item small {
+            display: block;
+            font-size: 14px;
+            color: #777;
+            margin: 0 0 10px;
+        }
+        .filter-history-tag {
+            display: block;
+            padding: 8px 15px;
+            font-size: 14px;
+            background-color: #FFF;
+            border: 1px #DDD solid;
+            border-radius: 4px;
+            margin: 0 10px 10px 0;
+        }
+        .filter-history-tag:hover {
+            border-color: var(--default);
+            box-shadow: 0px 10px 16px rgba(51, 98, 171, 0.14);
+        }
+
+        /* Form body */
+        .filter-item-body {
+            display: grid;
+            grid-gap: 10px;
+        }
+            /* Form select */
+            .filter-select {
+                display: block;
+                position: relative;
+                background-color: #FFF;
+                border-radius: 4px;
+                border: 1px #DDD solid;
+            }
+                .filter-select-head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 5px 0 15px;
+                    height: 40px;
+                    cursor: pointer;
+                }
+                    .filter-select-head svg {
+                        display: block;
+                        width: 24px;
+                        height: 24px;
+                        fill: #777;
+                    }
+                .filter-select-body {
+                    display: none;
+                }
+                    .filter-check {
+                        display: block;
+                    }
+                        .filter-check-input {
+                            display: none;
+                        }
+                        .filter-check-label {
+                            display: flex;
+                            align-items: center;
+                            padding: 10px 15px;
+                            border-top: 1px #DDD solid;
+                            font-size: 16px;
+                        }
+                        .filter-check-label:hover {
+                            background-color: #e8f1ff;
+                        }
+                        .filter-check-input:checked + .filter-check-label {
+                            background-color: var(--default-light);
+                            color: #FFF;
+                        }
+                            .filter-check-label span {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background-color: #EEE;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 4px;
+                                margin: 0 15px 0 0;
+                            }
+                            .filter-check-label:hover span {
+                                background-color: var(--default-light);
+                            }
+                            .filter-check-input:checked + .filter-check-label span {
+                                background-color: var(--default-dark);
+                            }
+                                .filter-check-label span svg {
+                                    display: block;
+                                    width: 14px;
+                                    height: 14px;
+                                    fill: #FFF;
+                                    opacity: 0;
+                                }
+                                .filter-check-input:checked + .filter-check-label span svg {
+                                    opacity: 1;
+                                }
